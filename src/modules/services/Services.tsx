@@ -49,7 +49,7 @@ const Services = () => {
                 <h1>{item.title}</h1>
                 <p>{item.descriptionOne}</p>
                 <p>{item.descriptionTwo}</p>
-                <a href=''>READ DETAILS</a>
+                <a href='1'>READ DETAILS</a>
               </div>
               <div className='shadow-layer'></div>
             </div>
