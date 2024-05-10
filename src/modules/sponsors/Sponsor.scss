@@ -1,0 +1,15 @@
+.sponsors {
+  padding: 100px 0;
+  background-color: #161720;
+  .sponsor_wrapper {
+    h6 {
+      font-size: 16px;
+      @include displayCenter(center, center);
+      color: $white-color;
+    }
+    .sponsor {
+      @include displayCenter(center, space-between);
+      padding-top: 25px;
+    }
+  }
+}

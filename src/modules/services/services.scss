@@ -1,0 +1,92 @@
+.services {
+  padding: 80px 0;
+  .services-wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    .services-heading {
+      padding: 0 70px 72px 0;
+      h1 {
+        text-transform: uppercase;
+        line-height: 62px;
+        font-weight: 600;
+        font-size: 48px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .service-section {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 70px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      background-color: #161720;
+      &-image {
+        transition: all 500ms ease;
+        padding-right: 40px;
+        img {
+          min-height: 74px;
+          min-width: 74px;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      &-content {
+        h1 {
+          line-height: 1.3em;
+          font-size: 26px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 25px;
+        }
+        p {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        a {
+          font-weight: 600;
+          display: inline-block;
+          color: $white_color;
+          font-size: 18px;
+          text-transform: uppercase;
+          margin-top: 10px;
+          text-decoration: none;
+          &:hover {
+            background: linear-gradient(
+              90deg,
+              rgb(159, 137, 247) 0%,
+              rgb(109, 43, 255) 32.16%,
+              rgb(64, 92, 255) 64.84%,
+              rgb(33, 211, 253) 98.02%
+            );
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      .shadow-layer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url('https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/2-1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150px;
+        left: 0;
+        visibility: hidden;
+      }
+      &:hover {
+        img {
+          transform: rotateY(360deg);
+        }
+        .shadow-layer {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.sidebar {
+  background-color: $white-color;
+  color: #000;
+  padding: 40px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  transition: left 0.5s ease;
+  .close_icon {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    // align-self: flex-start;
+    font-size: 35px;
+    cursor: pointer;
+    &:hover {
+      color: $main_color;
+    }
+  }
+  h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .services {
+    padding: 20px 0;
+    .title {
+      font-size: 17px;
+      padding: 10px 0;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  h1 {
+    padding: 20px 0;
+  }
+  .contact_info {
+    .address {
+      padding: 20px 0;
+      .icon {
+        display: flex;
+        .location {
+          font-size: 25px;
+          color: $main_color;
+          cursor: pointer;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: rotateY(360deg);
+          }
+        }
+        .title {
+          font-size: 16px;
+          margin-left: 20px;
+        }
+      }
+      .label {
+        margin-left: 45px;
+      }
+    }
+  }
+}

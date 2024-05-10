@@ -1,0 +1,28 @@
+.newsLatter {
+  background-color: #181923;
+  padding: 50px 0;
+  .newsLatter_wrapper {
+    @include displayCenter(Center, space-between);
+    .newsLatter_text {
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+    .newsLatter_section {
+      @include displayCenter(Center, center);
+
+      border: 1px solid rgb(60, 59, 59);
+      padding: 5px 5px 5px 20px;
+      border-radius: 35px;
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+        max-width: 400px;
+        color: $white-color;
+        &::placeholder {
+          color: rgb(60, 59, 59);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.process {
+  padding: 100px 0;
+  .process_wrapper {
+    @include displayCenter(center, space-between);
+    // flex-wrap: wrap;
+    gap: 90px;
+    .process_block {
+      transition: all 500ms ease;
+      padding-right: 40px;
+      img {
+        min-height: 74px;
+        min-width: 74px;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          transform: rotateY(360deg);
+        }
+      }
+      h2 {
+        padding: 20px 0;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      .text {
+        font-size: 17px;
+      }
+    }
+  }
+}
