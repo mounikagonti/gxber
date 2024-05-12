@@ -6,7 +6,7 @@ import {CgMenuLeft} from 'react-icons/cg'
 import {RiMenu3Line} from 'react-icons/ri'
 import Sidebar from '../sidebar/Sidebar'
 import LeftSidebar from '../leftSidebar/LeftSidebar'
-import Modal from '../Modal/Modal'
+import Modal from '../modal/Modal'
 import useWindowSize from '../../hooks/useWindowSize'
 
 const headerArray = [
