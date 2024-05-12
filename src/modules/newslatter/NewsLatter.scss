@@ -2,25 +2,44 @@
   background-color: #181923;
   padding: 50px 0;
   .newsLatter_wrapper {
-    @include displayCenter(Center, space-between);
+    @include displayCenter(center, space-between);
     .newsLatter_text {
+      @include displayCenter(Center, center);
       font-size: 48px;
       text-transform: uppercase;
     }
     .newsLatter_section {
-      @include displayCenter(Center, center);
-
+      @include displayCenter(center, center);
       border: 1px solid rgb(60, 59, 59);
-      padding: 5px 5px 5px 20px;
       border-radius: 35px;
+      padding: 5px 5px;
       input {
         background: transparent;
         border: none;
         outline: none;
-        max-width: 400px;
         color: $white-color;
         &::placeholder {
           color: rgb(60, 59, 59);
+        }
+      }
+      .btn {
+        margin-top: -30px;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .newsLatter {
+    .newsLatter_wrapper {
+      flex-wrap: wrap;
+      .newsLatter_text {
+        font-size: 35px;
+      }
+      .newsLatter_section {
+        .btn {
+          margin-left: -75px;
         }
       }
     }

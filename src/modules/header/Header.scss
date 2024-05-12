@@ -1,9 +1,17 @@
 .header {
   background-color: #161720;
   padding: 35px 0;
+  height: 120px;
+  width: 100%;
   color: $white_color;
+  z-index: 9;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   .container {
+    height: 100%;
     .header_wrapper {
+      height: 100%;
       @include displayCenter(center, space-between);
       .header_left {
         @include displayCenter(center, space-between);
@@ -25,10 +33,12 @@
         }
       }
       .header_middle_wrapper {
+        height: 100%;
         @include displayCenter(center, center);
         .header_middle {
           @include displayCenter(center, center);
           padding: 0 25px;
+          position: relative;
           a {
             text-decoration: none;
             color: $white-color;
@@ -40,12 +50,31 @@
           .bounce {
             margin-left: 5px;
             cursor: pointer;
-            &:hover {
-              animation: bounce 2s infinite;
-            }
           }
           &:hover {
             color: $main-color;
+            .bounce {
+              animation: bounce 2s infinite;
+            }
+          }
+          .modal {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 150px;
+            height: max-content;
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            font-size: 12px;
+            margin: auto;
+            h1 {
+              line-height: 30px;
+              cursor: pointer;
+              &:hover {
+                color: blue;
+              }
+            }
           }
         }
       }
@@ -54,20 +83,40 @@
         font-size: 25px;
         .search_icon {
           padding: 0 10px;
+          cursor: pointer;
         }
         .menu_icon {
           padding: 0 10px;
-          // position: absolute;
-          // top: 0;
-          // right: 0;
+          cursor: pointer;
         }
         .sideMenu {
           padding: 0 0 0 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &.scrolled {
+    background-color: $white-color;
+    color: #000;
+
+    .header_wrapper {
+      .header_left {
+        span {
+          color: #000;
+        }
+      }
+      .header_middle_wrapper {
+        .header_middle {
+          a {
+            color: #000;
+          }
         }
       }
     }
   }
 }
+
 
 @keyframes bounce {
   0%,
@@ -84,5 +133,3 @@
     transform: translateY(-15px);
   }
 }
-
-// background: linear-gradient(90deg, var(--color-six) 0%, var(--color-six) 32.16%, var(--main-color) 64.84%, var(--color-four) 98.02%);

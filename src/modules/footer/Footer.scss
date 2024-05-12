@@ -5,23 +5,18 @@
   left: 0px;
   bottom: 0px;
   background-repeat: no-repeat;
-  // background-image: url(https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/8-1.png);
-  // right: 0px;
-  // bottom: 0px;
-  // background-repeat: no-repeat;
   .footer_wrapper {
     .footer_wrapper_top {
       @include displayCenter(center, center);
       flex-direction: column;
       h2 {
-        // @include displayCenter(center, center);
         font-size: 48px;
         background: -webkit-linear-gradient(
           rgb(33, 211, 253),
           rgb(159, 137, 247),
           rgb(64, 92, 255)
         );
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         text-transform: uppercase;
       }
@@ -90,6 +85,18 @@
             color: $main-color;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .footer {
+    padding-top: 0px;
+    .footer_wrapper {
+      .footer_wrapper_bottom {
+        flex-wrap: wrap;
+        gap: 15px;
       }
     }
   }

@@ -9,9 +9,8 @@ import Team from './modules/Team/Team'
 import Process from './modules/process/Process'
 import Testimonial from './modules/testimonial/Testimonial'
 import NewsLatter from './modules/newslatter/NewsLatter'
-// import Sidebar from './modules/sidebar/Sidebar'
-// import LeftSidebar from './modules/leftSidebar/LeftSidebar'
-// import Model from './modules/model/Model'
+import ArrowTop from './modules/arrowTop/ArrowTop'
+
 
 const App = () => {
   return (
@@ -26,9 +25,7 @@ const App = () => {
       <Testimonial />
       <NewsLatter />
       <Footer />
-      {/* <Sidebar />
-      <LeftSidebar />
-      <Model /> */}
+      <ArrowTop />
     </div>
   )
 }

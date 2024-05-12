@@ -42,3 +42,22 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.arrow-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $white-color;
+  border-radius: 5px;
+  padding: 10px 17px;
+  color: #000;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.show-arrow-top {
+  visibility: visible;
+}
+.hide-arrow-top {
+  visibility: hidden;
+}

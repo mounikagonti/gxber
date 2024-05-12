@@ -31,33 +31,42 @@ const servicesArray = [
 
 interface LeftSidebarProps {
   setLeftMenu: React.Dispatch<React.SetStateAction<boolean>>
+  leftMenu: boolean
 }
-const LeftSidebar: React.FC<LeftSidebarProps> = ({setLeftMenu}) => {
+const LeftSidebar: React.FC<LeftSidebarProps> = ({setLeftMenu, leftMenu}) => {
   const handleOnClose = () => {
     setLeftMenu(false)
   }
 
   return (
-    <div className='leftSidebar'>
-      <div onClick={handleOnClose} className='close_icon'>
-        <AiOutlineClose />
-      </div>
-      <div className='logo_wrapper'>
-        <div className='logo'>G.</div>
-        <span>XBER</span>
-      </div>
-      <div className='search_wrapper'>
-        <input type='text' placeholder='SEARCH HERE' />
-        <div className='icon'>
-          <IoSearch />
+    <div
+      className={
+        leftMenu ? 'leftSidebar_overlay' : 'leftSidebar_overlay_hidden'
+      }
+    >
+      <div
+        className={leftMenu ? 'leftSidebar' : 'leftSidebar leftSidebar-hidden'}
+      >
+        <div onClick={handleOnClose} className='close_icon'>
+          <AiOutlineClose />
         </div>
-      </div>
-      <div className='services'>
-        {servicesArray.map((service) => (
-          <a href='1' key={service.id} className='title'>
-            {service.text}
-          </a>
-        ))}
+        <div className='logo_wrapper'>
+          <div className='logo'>G.</div>
+          <span>XBER</span>
+        </div>
+        <div className='search_wrapper'>
+          <input type='text' placeholder='SEARCH HERE' />
+          <div className='icon'>
+            <IoSearch />
+          </div>
+        </div>
+        <div className='services'>
+          {servicesArray.map((service) => (
+            <a href='1' key={service.id} className='title'>
+              {service.text}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   )

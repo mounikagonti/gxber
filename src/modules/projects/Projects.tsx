@@ -1,8 +1,6 @@
 import React from 'react'
 import ButtonCompt from '../buttoncomp/ButtonCompt'
 
-// https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/3-1.jpg
-// https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/2-1.jpg
 
 const Projects = () => {
   return (

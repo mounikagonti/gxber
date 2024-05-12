@@ -8,7 +8,6 @@
     gap: 20px;
     height: 100%;
     width: 100%;
-    // @include displayCenter(center, center);
     top: 0;
     left: 0;
     background-image: url('https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/6-1.png');
@@ -45,6 +44,24 @@
         span {
           font-size: 14px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .testimonial {
+    img {
+      padding: 50px 0;
+    }
+    .testimonial_wrapper {
+      flex-wrap: wrap;
+      .testimonial_left {
+        padding: 0 15px;
+        width: 600px;
+      }
+      .testimonial_right {
+        padding: 0 15px;
       }
     }
   }

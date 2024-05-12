@@ -24,7 +24,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <div className='projects-gradient'></div> */}
     </div>
   )
 }

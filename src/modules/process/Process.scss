@@ -2,7 +2,6 @@
   padding: 100px 0;
   .process_wrapper {
     @include displayCenter(center, space-between);
-    // flex-wrap: wrap;
     gap: 90px;
     .process_block {
       transition: all 500ms ease;
@@ -23,6 +22,16 @@
       .text {
         font-size: 17px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .process {
+    padding: 20px 0;
+    .process_wrapper {
+      gap: 50px;
+      flex-wrap: wrap;
     }
   }
 }

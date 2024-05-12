@@ -33,61 +33,64 @@ const servicesArray = [
 
 interface SidebarProps {
   setSideMenu: React.Dispatch<React.SetStateAction<boolean>>
+  sideMenu: boolean
 }
 
-const Sidebar: React.FC<SidebarProps> = ({setSideMenu}) => {
+const Sidebar: React.FC<SidebarProps> = ({setSideMenu, sideMenu}) => {
   const handleOnClose = () => {
     setSideMenu(false)
   }
 
   return (
-    <div className='sidebar'>
-      <div onClick={handleOnClose} className='close_icon'>
-        <IoMdClose />
-      </div>
-      <h1>Services</h1>
-      <div className='services'>
-        {servicesArray.map((service) => (
-          <div key={service.id} className='title'>
-            {service.text}
-          </div>
-        ))}
-      </div>
-      <h1>Contact Info</h1>
-      <div className='contact_info'>
-        <div className='address'>
-          <div className='icon'>
-            <div className='location'>
-              <GrLocation />
-            </div>
-            <strong className='title'>Our office</strong>
-          </div>
-          <div className='label'>
-            A-1, Envanto Headquarters, <br />
-            <span>Melbourne, Australia. </span>
-          </div>
+    <div className={sideMenu ? 'sidebar_overlay' : 'sidebar_overlay_hidden'}>
+      <div className={sideMenu ? 'sidebar' : 'sidebar sidebar-hidden'}>
+        <div onClick={handleOnClose} className='close_icon'>
+          <IoMdClose />
         </div>
-        <div className='address contact'>
-          <div className='icon'>
-            <div className='location'>
-              <FiPhone />
+        <h1>Services</h1>
+        <div className='services'>
+          {servicesArray.map((service) => (
+            <div key={service.id} className='title'>
+              {service.text}
             </div>
-            <strong className='title'>Phone</strong>
-          </div>
-          <div className='label'>
-            <a href='tel:+00-999-999-9999'>+(00) 999 999 9999</a> <br />
-            <a href='tel:+000-000-0000'>000 000 0000</a>
-          </div>
+          ))}
         </div>
-        <div className='address mail_info'>
-          <div className='icon'>
-            <div className='location'>
-              <GoMail />
+        <h1>Contact Info</h1>
+        <div className='contact_info'>
+          <div className='address'>
+            <div className='icon'>
+              <div className='location'>
+                <GrLocation />
+              </div>
+              <strong className='title'>Our office</strong>
             </div>
-            <strong className='title'>Email</strong>
+            <div className='label'>
+              A-1, Envanto Headquarters, <br />
+              <span>Melbourne, Australia. </span>
+            </div>
           </div>
-          <div className='label'>
-            <a href='mailto:contact@gxber.com'>contact@gxber.com</a>
+          <div className='address contact'>
+            <div className='icon'>
+              <div className='location'>
+                <FiPhone />
+              </div>
+              <strong className='title'>Phone</strong>
+            </div>
+            <div className='label'>
+              <a href='tel:+00-999-999-9999'>+(00) 999 999 9999</a> <br />
+              <a href='tel:+000-000-0000'>000 000 0000</a>
+            </div>
+          </div>
+          <div className='address mail_info'>
+            <div className='icon'>
+              <div className='location'>
+                <GoMail />
+              </div>
+              <strong className='title'>Email</strong>
+            </div>
+            <div className='label'>
+              <a href='mailto:contact@gxber.com'>contact@gxber.com</a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,14 +1,6 @@
 import React from 'react'
 import {FaStar} from 'react-icons/fa'
 
-// declare namespace JSX {
-//   interface IntrinsicElements {
-//     marquee: React.DetailedHTMLProps<
-//       React.HTMLAttributes<HTMLMarqueeElement>,
-//       HTMLMarqueeElement
-//     >
-//   }
-// }
 const Testimonial = () => {
   return (
     <div className='testimonial'>

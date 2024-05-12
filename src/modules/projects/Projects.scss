@@ -73,6 +73,20 @@
   }
 }
 
+@media screen and (max-width: $sm) {
+  .projects {
+    .projects-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      .projects-heading {
+        h1 {
+          line-height: 42px;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
 @keyframes rotateBackground {
   from {
     transform: rotate(0deg);

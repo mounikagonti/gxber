@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Model = () => {
+const Modal = () => {
   return (
-    <div className='model'>
+    <div className='modal'>
       {Array.from({length: 10}, (_, i) => (
         <h1 key={i}>HOME {i + 1}</h1>
       ))}
@@ -10,4 +10,4 @@ const Model = () => {
   )
 }
 
-export default Model
+export default Modal

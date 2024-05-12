@@ -1,9 +1,7 @@
 .hero {
-  // background-color: red;
   background-color: #161720;
-  height: 100vh;
-  width: 100vw;
   @include displayCenter(center, center);
+  height: 100vh;
   top: 0;
   left: 0;
   background-image: url('https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/pattern-1.png');
@@ -11,48 +9,84 @@
   background-size: auto;
   background-position: center;
   z-index: 1;
-
   .hero_wrapper {
-    color: $white-color;
     @include displayCenter(center, space-between);
     gap: 80px;
-    z-index: 10;
-
     .hero_left {
       .title {
-        font-size: 16px;
-        font-weight: 600;
+        position: relative;
+        top: -300px;
+        animation: slideFromTop 1s ease forwards;
       }
       h1 {
+        margin-top: 20px;
         font-size: 85px;
-        font-weight: 600;
-        line-height: 85px;
-        margin-top: 30px;
+        line-height: 87px;
+        position: relative;
+        left: -300px;
+        animation: slideFromLeft 1s ease forwards;
+        transition: transform 0.5s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
-      a {
-        width: 180px;
-        padding-top: 30px;
+      .btn {
+        position: relative;
+        left: -300px;
+        animation: slideFromLeft 1s ease forwards;
       }
     }
     .hero_right {
-      width: 1400px;
-      height: auto;
-      .heroImg {
+      margin-top: 30px;
+      width: 100%;
+      perspective: 1000px;
+      img {
         width: 100%;
-        height: 100%;
+        transition: transform 0.5s;
+        &:hover {
+          transform: rotateY(180deg);
+        }
       }
     }
   }
 }
-// .projects-gradient {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-image: url('https://themexriver.com/wp/gxbar/wp-content/uploads/2022/10/3-1.png');
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   // animation: rotateBackground 5s linear infinite;
-//   z-index: 1;
-// }
+
+@media screen and (max-width: $md) {
+  .hero {
+    height: auto;
+    .hero_wrapper {
+      flex-wrap: wrap;
+      .hero_left {
+        margin-top: 300px;
+        h1 {
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+      .hero_right {
+        margin-top: 30px;
+        .heroImg {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    top: -300px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}

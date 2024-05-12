@@ -22,6 +22,7 @@
       border-radius: 30px;
       border: 1px solid rgba(255, 255, 255, 0.04);
       display: flex;
+      gap: 10px;
       background-color: #161720;
       &-image {
         transition: all 500ms ease;
@@ -86,6 +87,25 @@
         .shadow-layer {
           visibility: visible;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .services {
+    .services-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      .services-heading {
+        h1 {
+          line-height: 42px;
+          font-size: 40px;
+        }
+      }
+      .service-section {
+        flex-wrap: wrap;
+        gap: 20px;
+        @include displayCenter(center, center);
       }
     }
   }
